@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% load static %}
+{% block css %}
+{#    <meta name="viewport" content="width=device-width,initial-scale=1">#}
+{#    <meta charset="UTF-8">#}
+{#    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>#}
+{#    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>#}
+    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="wrap">
+        <div class="header">
+            <nav>
+                <a href="#"><img src="{% static 'imgs/Discord_Merlin_bot_logo.png' %}"> </a>
+                <form class="search" method="post" action="{% url 'search' %}">
+                    {% csrf_token %}
+                    <div class="search-text">
+                        <input class="keyword" type="text" id="search" name="search" placeholder="검색어를 입력하세요.">
+                        <button type="submit">검색</button>
+                    </div>
+                </form>
+            </nav>
+        </div>
+        <div class="main-wrap">
+            <div class="right-menu" id="right-menu">
+                <ul>
+                    <li class="list">
+                        <a href="#">출퇴근</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">출퇴근</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">출퇴근</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">출퇴근</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">출퇴근</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">출퇴근</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">출퇴근</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">출퇴근</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">출퇴근</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="show-bnt" id="show-bnt"><img src="{% static 'imgs/open.png' %}"></button>
+            <button class="hide-bnt" id="hide-bnt"><img src="{% static 'imgs/close.png' %}"></button>
+            <div class="main-content-wrap">
+                <div class="logo-text">
+                    <img src="{% static 'imgs/Discord_Merlin_bot_logo.png' %}">
+                </div>
+                <div>
+                    소개글
+                </div>
+                <div class="main-content">
+                    <ul>
+                        <li>
+                            <a href="#a">
+                                <p class="content-title" id="a">
+                                    내용의 제목
+                                </p>
+                            </a>
+                            <p class="content-area"> 내용을 입력</p>
+                        </li>
+
+                        <li>
+                            <a href="/b">
+                                <p class="content-title">
+                                    내용의 제목
+                                </p>
+                            </a>
+                            <p class="content-area"> 내용을 입력</p>
+                        </li>
+                         <li>
+                            <a href="#">
+                                <p class="content-title">
+                                    내용의 제목
+                                </p>
+                            </a>
+                            <p class="content-area"> 내용을 입력</p>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p class="content-title">
+                                    내용의 제목
+                                </p>
+                            </a>
+                            <p class="content-area"> 내용을 입력</p>
+                        </li>
+                         <li>
+                            <a href="#">
+                                <p class="content-title">
+                                    내용의 제목
+                                </p>
+                            </a>
+                            <p class="content-area"> 내용을 입력</p>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p class="content-title">
+                                    내용의 제목
+                                </p>
+                            </a>
+                            <p class="content-area"> 내용을 입력</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        asdasdadasdsadasd
+    </div>
+    <script src="{% static 'js/test.js' %}"></script>
+{% endblock %}
+
