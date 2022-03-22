@@ -15,24 +15,24 @@
 
 
 {% block content %}
-    <div class="wrap">
-        <div class="header">
-            <nav>
-                <a href="#"><img src="{% static 'imgs/Discord_Merlin_bot_logo.png' %}"> </a>
-                <form class="search" method="post" action="{% url 'search' %}">
-                    {% csrf_token %}
-                    <div class="search-text">
-                        <input class="keyword" type="text" id="search" name="search" placeholder="검색어를 입력하세요.">
-                        <button type="submit">검색</button>
-                    </div>
-                </form>
-            </nav>
-        </div>
+{#    <div class="wrap">#}
+{#        <div class="header">#}
+{#            <nav>#}
+{#                <a href="/"><img src="{% static 'imgs/Discord_Merlin_bot_logo.png' %}"> </a>#}
+{#                <form class="search" method="post" action="{% url 'search' %}">#}
+{#                    {% csrf_token %}#}
+{#                    <div class="search-text">#}
+{#                        <input class="keyword" type="text" id="search" name="search" placeholder="검색어를 입력하세요.">#}
+{#                        <button type="submit">검색</button>#}
+{#                    </div>#}
+{#                </form>#}
+{#            </nav>#}
+{#        </div>#}
         <div class="main-wrap">
             <div class="right-menu" id="right-menu">
                 <ul>
                     <li class="list">
-                        <a href="#">출퇴근</a>
+                        <a href="/">home</a>
                     </li>
                     <li class="list">
                         <a href="#">출퇴근</a>
@@ -64,7 +64,7 @@
             <button class="hide-bnt" id="hide-bnt"><img src="{% static 'imgs/close.png' %}"></button>
             <div class="main-content-wrap">
                 <div class="logo-text">
-                    <img src="{% static 'imgs/Discord_Merlin_bot_logo.png' %}">
+                    <img src="{% static 'imgs/blue merlin.png' %}">
                 </div>
                 <div>
                     소개글
@@ -81,7 +81,7 @@
                         </li>
 
                         <li>
-                            <a href="/b">
+                            <a href="#b">
                                 <p class="content-title">
                                     내용의 제목
                                 </p>
@@ -126,10 +126,11 @@
                 </div>
             </div>
         </div>
+        <a id="back-to-top"></a>
     </div>
-    <div class="footer">
-        asdasdadasdsadasd
-    </div>
+{#    <div class="footer">#}
+{#        asdasdadasdsadasd#}
+{#    </div>#}
     <script src="{% static 'js/test.js' %}"></script>
 {% endblock %}
 

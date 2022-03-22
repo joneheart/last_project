@@ -68,21 +68,26 @@
                 </div>
                 <div class="main-content">
                     <ul>
+{#                        {% for i in search_title | length %}#}
                         <li>
-                            <a href="{{ search_url }}">
+                            {% for i in search_url %}
+                            <a href="{{ i }}">
+                            {% endfor %}
+                                {% for j in search_title %}
                                 <p class="content-title" id="a">
-                                    {{ search_title }}
+                                    {{ j }}
                                 </p>
+                                {% endfor %}
                             </a>
-                            <p class="content-area"> 내용을 입력</p>
                         </li>
+{#                        {% endfor %}#}
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     <div class="footer">
-        asdasdadasdsadasd
+        footer
     </div>
     <script src="{% static 'js/test.js' %}"></script>
 {% endblock %}

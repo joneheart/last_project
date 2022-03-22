@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <title>{% block title %}{% endblock %}</title>
 
     <script
@@ -18,31 +19,38 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
     {% endblock %}
 </head>
+<style>
+    ul{
+       list-style:none;
+       }
+</style>
+
+
 <body>
-{#    <div class="wrap">#}
-{#        <div class="header">#}
-{#            <nav>#}
-{#                <a href="#"><img src="{% static 'imgs/Discord_Merlin_bot_logo.png' %}"> </a>#}
-{#                <form class="search" method="post" action="/">#}
-{#                    {% csrf_token %}#}
-{#                    <div class="search-text">#}
-{#                        <input class="keyword" type="text" id="search" name="search" placeholder="검색어를 입력하세요.">#}
-{#                        <button type="submit">검색</button>#}
-{#                    </div>#}
-{#                </form>#}
-{#            </nav>#}
-{#        </div>#}
+    <div class="wrap">
+        <div class="header">
+            <nav>
+                <a href="/"><img src="{% static 'imgs/Discord_Merlin_bot_logo.png' %}"> </a>
+                <form class="search" method="post" action="search">
+                    {% csrf_token %}
+                    <div class="search-text">
+                        <input class="keyword" type="text" id="search" name="search" placeholder="검색어를 입력하세요.">
+                        <button type="submit">검색</button>
+                    </div>
+                </form>
+            </nav>
+        </div>
         {% block content %}
 
         {% endblock %}
         {% block js %}
 
         {% endblock %}
-{#    </div>#}
-{##}
-{#    <div class="footer">#}
-{#        asdasdadasdsadasd#}
-{#    </div>#}
+    </div>
+
+    <div class="footer">
+        asdasdadasdsadasd
+    </div>
 
 </body>
 </html>

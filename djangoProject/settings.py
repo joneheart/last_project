@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-43e^16h)ta4rt9+ha!_hscqy5x_v6!ar(7z^b(*22y1^r8in00
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -83,7 +84,7 @@ DATABASES = {
         'NAME': 'sys',
         'USER': 'admin',
         'PASSWORD': 'qwer1234',
-        'HOST': 'database-2.ccgfvfq3lbj7.ap-northeast-2.rds.amazonaws.com',
+        'HOST': 'database-1.ccgfvfq3lbj7.ap-northeast-2.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
@@ -125,6 +126,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
+# STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

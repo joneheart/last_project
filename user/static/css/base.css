@@ -53,7 +53,7 @@
 
 /* footer */
 .footer{
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
     position: relative;
     left: 50%;
     transform: translate(-50%, 0);
